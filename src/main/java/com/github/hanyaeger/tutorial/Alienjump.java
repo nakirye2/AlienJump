@@ -1,5 +1,6 @@
 package com.github.hanyaeger.tutorial;
 
+import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.YaegerGame;
 
 public class Alienjump extends YaegerGame {
@@ -9,11 +10,17 @@ public class Alienjump extends YaegerGame {
 
     @Override
     public void setupGame() {
-
+        // ook tutorial.
+        setGameTitle("Alien Jump");
+        setSize(new Size(800, 600));
     }
 
     @Override
     public void setupScenes() {
-
+        //komt van tutorial.
+        addScene(0, new TitleScene());
+        //addScene(2, new (gamescene))
+        addScene(2, new EndScene());
     }
 }
+
