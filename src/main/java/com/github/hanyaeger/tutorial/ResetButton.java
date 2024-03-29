@@ -17,7 +17,7 @@ public class ResetButton extends TextEntity {
 
 
     public void onMouseButtonPressed(MouseButton button, Coordinate2D coordinate2D){
-        alienjump.setActiveScene(0);
+        if (button == MouseButton.PRIMARY) alienjump.setActiveScene(0);
     }
 
 

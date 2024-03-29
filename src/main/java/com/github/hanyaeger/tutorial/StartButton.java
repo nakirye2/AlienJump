@@ -21,7 +21,7 @@ public class StartButton extends TextEntity {
 
 
     public void onMouseButtonPressed(MouseButton button, Coordinate2D coordinate2D){
-        alienjump.setActiveScene(2);
+        if (button == MouseButton.PRIMARY) alienjump.setActiveScene(2); // moet 1 zijn
     }
 
 
