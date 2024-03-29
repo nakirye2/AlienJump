@@ -1,9 +1,11 @@
 module waterworld {
     requires hanyaeger;
 
-    exports com.github.hanyaeger.tutorial;
+    exports AlienJump;
 
     opens audio;
     opens backgrounds;
     opens sprites;
+    exports Scenes;
+    exports Entities;
 }

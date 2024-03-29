@@ -1,5 +1,7 @@
-package com.github.hanyaeger.tutorial;
+package Scenes;
 
+import AlienJump.Alienjump;
+import Scenes.StartButton;
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.impl.TextEntity;
@@ -10,6 +12,11 @@ import javafx.scene.text.FontWeight;
 
 public class TitleScene extends StaticScene {
     Alienjump alienjump;
+
+    public TitleScene(Alienjump alienjump) {
+        this.alienjump = alienjump;
+    }
+
     @Override
     public void setupScene() {
         // komt van tutorial
@@ -37,15 +44,4 @@ public class TitleScene extends StaticScene {
         startButton.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 80));
         addEntity(startButton);
     }
-
-//        alienText.setAnchorPoint(AnchorPoint.TOP_CENTER);
-//        alienText.setFill(Color.LIGHTPINK);
-//        alienText.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 80));
-//        addEntity(alienText);
-//
-//        play.setAnchorPoint(AnchorPoint.BOTTOM_CENTER);
-//        play.setFill(Color.LIGHTPINK);
-//        play.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 80));
-//        addEntity(play);
-     }
-
+}
