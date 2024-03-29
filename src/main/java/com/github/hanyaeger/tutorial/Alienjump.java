@@ -17,10 +17,13 @@ public class Alienjump extends YaegerGame {
 
     @Override
     public void setupScenes() {
+        TitleScene titleScene = new TitleScene(this);
+
+        EndScene endScene = new EndScene(this);
         //komt van tutorial.
-        addScene(0, new TitleScene());
+        addScene(0, titleScene);
         //addScene(2, new (gamescene))
-        addScene(2, new EndScene());
+        addScene(2, endScene);
     }
 }
 

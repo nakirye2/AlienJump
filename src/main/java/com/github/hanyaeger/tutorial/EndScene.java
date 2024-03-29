@@ -11,6 +11,11 @@ import javafx.scene.text.FontWeight;
 public class EndScene extends StaticScene {
     Alienjump alienjump;
     int score;
+
+    public EndScene(Alienjump alienjump) {
+        this.alienjump = alienjump;
+    }
+
     @Override
     public void setupScene() {
         // komt van tutorial
@@ -27,36 +32,18 @@ public class EndScene extends StaticScene {
     public void setupEntities() {
 
         // Add title text
-        TextEntity title = new TextEntity(new Coordinate2D(getWidth() / 2, getHeight() / 6), "Your score is: " + Integer.toString(score));
-        title.setAnchorPoint(AnchorPoint.TOP_CENTER);
-        title.setFill(Color.LIGHTPINK);
-        title.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 80));
-        addEntity(title);
+        TextEntity scoreShow = new TextEntity(new Coordinate2D(getWidth() / 2, getHeight() / 6), "Your score is: " + score);
+        scoreShow.setAnchorPoint(AnchorPoint.TOP_CENTER);
+        scoreShow.setFill(Color.LIGHTPINK);
+        scoreShow.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 80));
+        addEntity(scoreShow);
 
         // Add start button
-        StartButton startButton = new StartButton(new Coordinate2D(getWidth() / 2, getHeight() / 2), alienjump);
-        startButton.setFill(Color.LAVENDER);
-        startButton.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 80));
-        addEntity(startButton);
+        ResetButton resetButton = new ResetButton(new Coordinate2D(getWidth() / 2, getHeight() / 2), alienjump);
+        resetButton.setFill(Color.LAVENDER);
+        resetButton.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 80));
+        addEntity(resetButton);
 
 
-        // van de tutorial
-//        var alienText = new TextEntity(
-//                new Coordinate2D(getWidth() / 2, getHeight() / 6),
-//                "Your score is: " + Integer.toString(score));
-//
-//       var playAgain = new TextEntity(
-//        new Coordinate2D(getWidth() / 2, getHeight() / 1.1),
-//                 "Back to title?");
-
-//        alienText.setAnchorPoint(AnchorPoint.TOP_CENTER);
-//        alienText.setFill(Color.LIGHTPINK);
-//        alienText.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 80));
-//        addEntity(alienText);
-//
-//        playAgain.setAnchorPoint(AnchorPoint.BOTTOM_CENTER);
-//        playAgain.setFill(Color.LIGHTPINK);
-//        playAgain.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 80));
-//        addEntity(playAgain);
     }
 }
